@@ -1,0 +1,21 @@
+<script src="/socket.io/socket.io.js"></script>
+
+<!doctype html>
+<html>
+  <body>
+    <ul id="messages"></ul>
+      <input id="m" autocomplete="off" />
+      <button id="send">Send</button>
+  </body>
+</html>
+<script>
+  var socket = io();
+  socket.on("message",(msg)=>{
+    console.log(msg);
+  })
+  document.getElementById("send").addEventListener("click", ()=>{
+    socket.emit("message",document.getElementById("m").value)
+          document.getElementById("m").value=""
+  });
+  
+</script>
