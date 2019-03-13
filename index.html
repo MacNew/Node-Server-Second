@@ -9,7 +9,11 @@
   </body>
 </html>
 <script>
-  var socket = io();
+  var socket = io({
+    query:{
+      "Auth":"token;pass"
+    }
+  });
   socket.on("message",(msg)=>{
     console.log(msg);
   })
