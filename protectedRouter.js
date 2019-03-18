@@ -5,7 +5,7 @@ const protectedRoute=app;
 
 
 protectedRoute.use((req,res,next)=>{
-    var token = req.headers['token'];
+    var token = req.headers['auth-token'];
     // decode token
     if (token) {
         // verifies secret and checks if the token is expired
@@ -27,11 +27,5 @@ protectedRoute.use((req,res,next)=>{
         })
     }
 })
-
-
-protectedRoute.get("/check",(req,res)=>{
-    res.send("asdjkagsjkd")
-})
-
 
 module.exports=protectedRoute;

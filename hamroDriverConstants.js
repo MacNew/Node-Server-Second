@@ -9,6 +9,9 @@ module.exports = {
     TOKEN:"token",
     PASS:"p0d@mibe!",
     BASE_URL:"/hamrodriver/",
-    SECRET:"jot"
+    SECRET:"jot",
+    CLIENTS:"clients"
+
     
 }
+
